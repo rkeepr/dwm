@@ -1,5 +1,5 @@
 # dwm
-My build of dwm-6.3.
+My build of dwm-6.4
 
 ### Patches applied:
 https://dwm.suckless.org/patches/smartborders/ 
