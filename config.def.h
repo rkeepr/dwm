@@ -1,19 +1,17 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10",
-					"SourceHanSans:size=10:antialias=true:autohint=true", 
-					"PixelsJoy:pixelsize=12:antialias=true:autohint=true", 
-					"NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
-static const char col_gray1[]       = "#0e0e0e";    /* default #222222*/
-static const char col_gray2[]       = "#0e0e0e";    /* default #444444*/
-static const char col_gray3[]       = "#bbbbbb";    /* default #bbbbbb*/
-static const char col_gray4[]       = "#eeeeee";    /* default #eeeeee*/
-static const char col_cyan[]        = "#444444";    /* default #005577*/
+static const char *fonts[]          = { "monospace:size=10" };
+static const char dmenufont[]       = "monospace:size=10";
+static const char col_gray1[]       = "#222222";
+static const char col_gray2[]       = "#444444";
+static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray4[]       = "#eeeeee";
+static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -30,14 +28,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-/*	{ "firefox",           NULL,       NULL,       1 << 0,       0,           -1 },*/
-/*	{ "librewolf-default", NULL,       NULL,       1 << 0,       0,           -1 },*/
-/*	{ "Brave-browser",     NULL,       NULL,       1 << 0,       0,           -1 },*/
-/*	{ "St",                NULL,       NULL,       1 << 1,       0,           -1 },*/
-/*	{ "Amule",             NULL,       NULL,       1 << 6,       0,           -1 },*/
-	{ "qBittorrent",       NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "Transmission-gtk",  NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "TelegramDesktop",   NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -54,7 +45,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -65,7 +56,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
