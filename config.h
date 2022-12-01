@@ -37,7 +37,6 @@ static const Rule rules[] = {
 /*	{ "Amule",             NULL,       NULL,       1 << 6,       0,           -1 },*/
 	{ "qBittorrent",       NULL,       NULL,       1 << 7,       0,           -1 },
 	{ "Transmission-gtk",  NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "TelegramDesktop",   NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
