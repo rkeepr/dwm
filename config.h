@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -13,11 +13,19 @@ static const char col_gray1[]       = "#0e0e0e";    /* default #222222*/
 static const char col_gray2[]       = "#0e0e0e";    /* default #444444*/
 static const char col_gray3[]       = "#bbbbbb";    /* default #bbbbbb*/
 static const char col_gray4[]       = "#eeeeee";    /* default #eeeeee*/
-static const char col_cyan[]        = "#444444";    /* default #005577*/
+static const char col_cyan[]        = "#363636";    /* default #005577*/
+static const char col_selbor[]      = "#6B6B6B";    /* default #005577*/
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	/*               fg         bg         border     */
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_selbor },
+};
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
@@ -35,8 +43,9 @@ static const Rule rules[] = {
 /*	{ "Brave-browser",     NULL,       NULL,       1 << 0,       0,           -1 },*/
 /*	{ "St",                NULL,       NULL,       1 << 1,       0,           -1 },*/
 /*	{ "Amule",             NULL,       NULL,       1 << 6,       0,           -1 },*/
-	{ "qBittorrent",       NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "Transmission-gtk",  NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "qBittorrent",       NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Transmission-gtk",  NULL,       NULL,       1 << 8,       0,           -1 },
+
 };
 
 /* layout(s) */
