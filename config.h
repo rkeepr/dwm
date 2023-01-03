@@ -6,8 +6,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10",
-					"SourceHanSans:size=10:antialias=true:autohint=true", 
-					"PixelsJoy:pixelsize=12:antialias=true:autohint=true", 
+					"NotoSansCJK-Regular:size=10:antialias=true:autohint=true", 
+					"JoyPixels:pixelsize=12:antialias=true:autohint=true", 
 					"NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
 static const char col_gray1[]       = "#0e0e0e";    /* default #222222*/
 static const char col_gray2[]       = "#0e0e0e";    /* default #444444*/
