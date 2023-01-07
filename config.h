@@ -6,7 +6,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10",
-					"NotoSansCJK-Regular:size=10:antialias=true:autohint=true", 
+					"Noto Sans Mono CJK JP:size=10:antialias=true:autohint=true", 
 					"JoyPixels:pixelsize=12:antialias=true:autohint=true", 
 					"NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
 static const char col_gray1[]       = "#0e0e0e";    /* default #222222*/
@@ -42,7 +42,7 @@ static const Rule rules[] = {
 /*	{ "librewolf-default", NULL,       NULL,       1 << 0,       0,           -1 },*/
 /*	{ "Brave-browser",     NULL,       NULL,       1 << 0,       0,           -1 },*/
 /*	{ "St",                NULL,       NULL,       1 << 1,       0,           -1 },*/
-/*	{ "Amule",             NULL,       NULL,       1 << 6,       0,           -1 },*/
+/*	{ "Amule",             NULL,       NULL,       1 << 7,       0,           -1 },*/
 	{ "qBittorrent",       NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Transmission-gtk",  NULL,       NULL,       1 << 8,       0,           -1 },
 
